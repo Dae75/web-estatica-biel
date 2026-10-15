@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head><script src="/web-estatica-biel/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web-estatica-biel/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia d&#39;instal·lació de Hugo | Hugo Biel i Marc</title>
+  <link rel="stylesheet" href="/web-estatica-biel/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="/">Hugo <span>Biel i Marc</span></a>
+    <nav>
+      
+        <a href="/web-estatica-biel/">Inici</a>
+      
+        <a href="/web-estatica-biel/installacio/">Instal·lació</a>
+      
+        <a href="/web-estatica-biel/publicacio/">Publicació</a>
+      
+        <a href="/web-estatica-biel/personalitzacio/">Personalització</a>
+      
+        <a href="/web-estatica-biel/preguntes/">Preguntes</a>
+      
+        <a href="/web-estatica-biel/contacte/">Contacte</a>
+      
+    </nav>
+  </header>
+  <main>
+    
+<section class="content">
+  <h1>Guia d&#39;instal·lació de Hugo</h1>
+  <h2 id="requisits">Requisits</h2>
+<ul>
+<li>Un ordinador amb Windows, macOS o Linux.</li>
+<li>Un terminal. A Windows recomanem <strong>Git Bash</strong>, que s&rsquo;instal·la amb Git.</li>
+<li>Un editor de codi, per exemple <a href="https://code.visualstudio.com">VS Code</a>.</li>
+<li>Un compte a <a href="https://github.com">GitHub</a>, necessari per a la pàgina de publicació.</li>
+</ul>
+<h2 id="1-installar-git">1. Instal·lar Git</h2>
+<h3 id="windows">Windows</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>winget install Git.Git
+</span></span></code></pre></div><h3 id="macos">macOS</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git
+</span></span></code></pre></div><h3 id="linux-debianubuntu">Linux (Debian/Ubuntu)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install git
+</span></span></code></pre></div><h2 id="2-installar-hugo">2. Instal·lar Hugo</h2>
+<p>Instal·la sempre l&rsquo;edició <strong>extended</strong>, que inclou funcions extra (com processar SASS) i és la que fan servir la majoria de temes.</p>
+<h3 id="windows-1">Windows</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>winget install Hugo.Hugo.Extended
+</span></span></code></pre></div><h3 id="macos-1">macOS</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><h3 id="linux">Linux</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo snap install hugo
+</span></span></code></pre></div><h2 id="3-comprovar-la-installació">3. Comprovar la instal·lació</h2>
+<p>Tanca el terminal, obre&rsquo;n un de nou i executa:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><p>Si Hugo respon amb un número de versió i la paraula <code>extended</code>, tot està bé. Si diu <code>command not found</code>, reinicia el terminal o l&rsquo;ordinador.</p>
+<h2 id="4-configurar-git-només-el-primer-cop">4. Configurar Git (només el primer cop)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;El teu nom&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;el-teu-correu@exemple.com&#34;</span>
+</span></span></code></pre></div><h2 id="5-crear-el-primer-site">5. Crear el primer site</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site el-meu-site
+</span></span><span style="display:flex;"><span>cd el-meu-site
+</span></span><span style="display:flex;"><span>git init -b main
+</span></span></code></pre></div><p>Assegura&rsquo;t d&rsquo;estar <strong>dins la carpeta del projecte</strong> abans de fer <code>git init</code>. Així el repositori és exclusiu d&rsquo;aquesta web. Si ho fas des d&rsquo;una carpeta que ja és un repositori, Git mostrarà el missatge <code>Reinitialized existing Git repository</code>, i aleshores estàs al lloc equivocat.</p>
+<h2 id="6-estructura-que-sha-creat">6. Estructura que s&rsquo;ha creat</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Carpeta o fitxer</th>
+					<th>Per a què serveix</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>content/</code></td>
+					<td>Les pàgines, escrites en Markdown</td>
+			</tr>
+			<tr>
+					<td><code>layouts/</code></td>
+					<td>Les plantilles HTML</td>
+			</tr>
+			<tr>
+					<td><code>static/</code></td>
+					<td>Fitxers que es copien tal qual (CSS, imatges)</td>
+			</tr>
+			<tr>
+					<td><code>assets/</code></td>
+					<td>Fitxers que Hugo pot processar</td>
+			</tr>
+			<tr>
+					<td><code>data/</code></td>
+					<td>Dades en JSON, YAML o TOML</td>
+			</tr>
+			<tr>
+					<td><code>archetypes/</code></td>
+					<td>Models per a pàgines noves</td>
+			</tr>
+			<tr>
+					<td><code>hugo.toml</code></td>
+					<td>La configuració del site</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="7-crear-les-plantilles-mínimes">7. Crear les plantilles mínimes</h2>
+<p>Hugo no mostra res sense plantilles. Dins de <code>layouts/</code> calen tres fitxers:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Fitxer</th>
+					<th>Funció</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>baseof.html</code></td>
+					<td>L&rsquo;estructura comuna: capçalera, menú i peu</td>
+			</tr>
+			<tr>
+					<td><code>home.html</code></td>
+					<td>El disseny de la portada</td>
+			</tr>
+			<tr>
+					<td><code>page.html</code></td>
+					<td>El disseny de la resta de pàgines</td>
+			</tr>
+	</tbody>
+</table>
+<p>Si no existeixen, Hugo mostra l&rsquo;avís <code>found no layout file</code>. El codi complet el pots veure al repositori d&rsquo;aquesta web, o bé pots usar un <a href="../personalitzacio/#usar-un-tema">tema</a>.</p>
+<h2 id="8-provar-en-local">8. Provar en local</h2>
+<p>Engega el servidor de desenvolupament:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>Obre l&rsquo;adreça que mostra el terminal (normalment <code>http://localhost:1313</code>). Els canvis que facis als fitxers es veuen al navegador a l&rsquo;instant. Atura el servidor amb <code>Ctrl+C</code>.</p>
+<h2 id="següent-pas">Següent pas</h2>
+<p>Quan la web funcioni en local, passa a la guia de <a href="../publicacio/">publicació</a>.</p>
+
+</section>
+
+  </main>
+  <footer>
+    <p>© 2026 Hugo Biel i Marc. Guia educativa sobre Hugo.</p>
+  </footer>
+</body>
+</html>

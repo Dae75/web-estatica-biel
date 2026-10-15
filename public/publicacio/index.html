@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head><script src="/web-estatica-biel/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web-estatica-biel/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publicar la web a GitHub Pages | Hugo Biel i Marc</title>
+  <link rel="stylesheet" href="/web-estatica-biel/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="/">Hugo <span>Biel i Marc</span></a>
+    <nav>
+      
+        <a href="/web-estatica-biel/">Inici</a>
+      
+        <a href="/web-estatica-biel/installacio/">Instal·lació</a>
+      
+        <a href="/web-estatica-biel/publicacio/">Publicació</a>
+      
+        <a href="/web-estatica-biel/personalitzacio/">Personalització</a>
+      
+        <a href="/web-estatica-biel/preguntes/">Preguntes</a>
+      
+        <a href="/web-estatica-biel/contacte/">Contacte</a>
+      
+    </nav>
+  </header>
+  <main>
+    
+<section class="content">
+  <h1>Publicar la web a GitHub Pages</h1>
+  <h2 id="com-funciona">Com funciona</h2>
+<p>GitHub Pages serveix fitxers estàtics, així que és ideal per a Hugo. Amb <strong>GitHub Actions</strong> configurem un procés automàtic: cada vegada que fas <code>git push</code>, GitHub construeix la web amb Hugo i la publica.</p>
+<h2 id="1-configurar-el-baseurl">1. Configurar el <code>baseURL</code></h2>
+<p>Al fitxer <code>hugo.toml</code>, posa l&rsquo;adreça final de la web:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://EL-TEU-USUARI.github.io/NOM-DEL-REPOSITORI/&#39;</span>
+</span></span></code></pre></div><p>L&rsquo;usuari va <strong>en minúscules</strong> a l&rsquo;adreça, encara que el teu usuari tingui majúscules. Per exemple, l&rsquo;usuari <code>Dae75</code> es converteix en <code>dae75.github.io</code>.</p>
+<h2 id="2-crear-el-gitignore">2. Crear el <code>.gitignore</code></h2>
+<p>A l&rsquo;arrel del projecte, crea un fitxer <code>.gitignore</code> amb:</p>
+<pre tabindex="0"><code>public/
+resources/_gen/
+.hugo_build.lock
+</code></pre><p>Així no pugem a GitHub els fitxers que Hugo genera sol.</p>
+<h2 id="3-crear-el-workflow">3. Crear el workflow</h2>
+<p>Crea el fitxer <code>.github/workflows/hugo.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Desplega Hugo a GitHub Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [<span style="color:#ae81ff">main]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">read</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pages</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">concurrency</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group</span>: <span style="color:#ae81ff">pages</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cancel-in-progress</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">HUGO_VERSION</span>: <span style="color:#ae81ff">0.168.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Instal·lar Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          sudo dpkg -i ${{ runner.temp }}/hugo.deb</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/configure-pages@v5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">pages</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Construir</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">github-pages</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">${{ steps.deployment.outputs.page_url }}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">deployment</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/deploy-pages@v4</span>
+</span></span></code></pre></div><p>Posa a <code>HUGO_VERSION</code> la mateixa versió que tens instal·lada (<code>hugo version</code>), així la web es construeix igual a GitHub que al teu ordinador.</p>
+<h2 id="4-crear-el-repositori-a-github">4. Crear el repositori a GitHub</h2>
+<ol>
+<li>Ves a <a href="https://github.com/new">github.com/new</a>.</li>
+<li>Posa-li un nom, marca <strong>Public</strong> i <strong>no</strong> afegeixis README, .gitignore ni llicència.</li>
+<li>Clica <strong>Create repository</strong>.</li>
+</ol>
+<h2 id="5-pujar-el-codi">5. Pujar el codi</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Primera versió de la web&#34;</span>
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/EL-TEU-USUARI/NOM-DEL-REPOSITORI.git
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><h2 id="6-activar-github-pages">6. Activar GitHub Pages</h2>
+<ol>
+<li>Al repositori, ves a <strong>Settings → Pages</strong>.</li>
+<li>A <strong>Build and deployment → Source</strong>, tria <strong>GitHub Actions</strong>.</li>
+<li>Ves a la pestanya <strong>Actions</strong> i espera que el desplegament acabi en verd (1-2 minuts).</li>
+<li>La web serà a <code>https://EL-TEU-USUARI.github.io/NOM-DEL-REPOSITORI/</code>.</li>
+</ol>
+<h2 id="7-publicar-canvis-nous">7. Publicar canvis nous</h2>
+<p>Cada cop que modifiquis alguna cosa:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Descripció del canvi&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><p>En un parell de minuts la web publicada s&rsquo;actualitza.</p>
+<h2 id="alternatives">Alternatives</h2>
+<p>Hugo també es pot publicar a Netlify, Cloudflare Pages o a qualsevol hostatge que serveixi fitxers estàtics: només cal pujar el contingut de la carpeta <code>public/</code> després d&rsquo;executar <code>hugo</code>.</p>
+
+</section>
+
+  </main>
+  <footer>
+    <p>© 2026 Hugo Biel i Marc. Guia educativa sobre Hugo.</p>
+  </footer>
+</body>
+</html>

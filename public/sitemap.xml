@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/web-estatica-biel/contacte/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web-estatica-biel/installacio/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web-estatica-biel/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web-estatica-biel/personalitzacio/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web-estatica-biel/preguntes/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web-estatica-biel/publicacio/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web-estatica-biel/serveis/</loc>
+  </url>
+</urlset>

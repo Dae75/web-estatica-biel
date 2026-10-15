@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head><script src="/web-estatica-biel/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web-estatica-biel/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preguntes habituals i recursos | Hugo Biel i Marc</title>
+  <link rel="stylesheet" href="/web-estatica-biel/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="/">Hugo <span>Biel i Marc</span></a>
+    <nav>
+      
+        <a href="/web-estatica-biel/">Inici</a>
+      
+        <a href="/web-estatica-biel/installacio/">Instal·lació</a>
+      
+        <a href="/web-estatica-biel/publicacio/">Publicació</a>
+      
+        <a href="/web-estatica-biel/personalitzacio/">Personalització</a>
+      
+        <a href="/web-estatica-biel/preguntes/">Preguntes</a>
+      
+        <a href="/web-estatica-biel/contacte/">Contacte</a>
+      
+    </nav>
+  </header>
+  <main>
+    
+<section class="content">
+  <h1>Preguntes habituals i recursos</h1>
+  <h2 id="errors-habituals">Errors habituals</h2>
+<h3 id="la-web-no-té-estils-a-github-pages">La web no té estils a GitHub Pages</h3>
+<p>Revisa que el <code>baseURL</code> del <code>hugo.toml</code> coincideixi exactament amb l&rsquo;adreça de la web, incloent el nom del repositori.</p>
+<h3 id="error-404-a-github-pages">Error 404 a GitHub Pages</h3>
+<p>Comprova que a <strong>Settings → Pages</strong> la font sigui <strong>GitHub Actions</strong> i que el workflow hagi acabat en verd a la pestanya <strong>Actions</strong>.</p>
+<h3 id="hugo-command-not-found"><code>hugo: command not found</code></h3>
+<p>Reinicia el terminal. Si continua fallant, torna a executar la instal·lació de Hugo.</p>
+<h3 id="found-no-layout-file"><code>found no layout file</code></h3>
+<p>Hugo no troba les plantilles. Comprova que a <code>layouts/</code> hi ha <code>baseof.html</code>, <code>home.html</code> i <code>page.html</code>.</p>
+<h3 id="hugo-mostra-avisos-de-deprecated">Hugo mostra avisos de <code>deprecated</code></h3>
+<p>Normalment són canvis de noms entre versions. L&rsquo;avís indica quina opció has de substituir i per quina. Per exemple, <code>languageCode</code> ara es diu <code>locale</code>.</p>
+<h3 id="git-init-diu-reinitialized-existing-git-repository"><code>git init</code> diu &ldquo;Reinitialized existing Git repository&rdquo;</h3>
+<p>Estàs dins d&rsquo;una carpeta que ja pertany a un altre repositori. Entra a la carpeta del projecte abans de fer <code>git init</code>.</p>
+<h2 id="preguntes-freqüents">Preguntes freqüents</h2>
+<h3 id="cal-saber-programar">Cal saber programar?</h3>
+<p>No gaire. Per escriure contingut només cal Markdown. Per a les plantilles et serviran nocions bàsiques d&rsquo;HTML i CSS.</p>
+<h3 id="es-pot-fer-un-blog">Es pot fer un blog?</h3>
+<p>Sí, és un dels usos més habituals. Crea una carpeta <code>content/blog/</code> amb un fitxer per entrada.</p>
+<h3 id="es-poden-fer-formularis-de-contacte">Es poden fer formularis de contacte?</h3>
+<p>La web és estàtica, així que cal un servei extern com Formspree o Netlify Forms.</p>
+<h3 id="es-pot-usar-un-domini-propi">Es pot usar un domini propi?</h3>
+<p>Sí. GitHub Pages permet configurar un domini personalitzat a <strong>Settings → Pages</strong>.</p>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://gohugo.io/documentation/">Documentació oficial de Hugo</a></li>
+<li><a href="https://themes.gohugo.io">Galeria de temes</a></li>
+<li><a href="https://discourse.gohugo.io">Fòrum de la comunitat</a></li>
+<li><a href="https://docs.github.com/pages">Documentació de GitHub Pages</a></li>
+<li><a href="https://www.markdownguide.org">Guia de Markdown</a></li>
+</ul>
+
+</section>
+
+  </main>
+  <footer>
+    <p>© 2026 Hugo Biel i Marc. Guia educativa sobre Hugo.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+baseURL = 'https://dae75.github.io/web-estatica-biel/'
+locale = 'ca'
+title = 'Hugo Biel i Marc'
+disableKinds = ['taxonomy', 'term']
+
+[menus]
+  [[menus.main]]
+    name = 'Inici'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Instal·lació'
+    pageRef = '/installacio'
+    weight = 20
+  [[menus.main]]
+    name = 'Publicació'
+    pageRef = '/publicacio'
+    weight = 30
+  [[menus.main]]
+    name = 'Personalització'
+    pageRef = '/personalitzacio'
+    weight = 40
+  [[menus.main]]
+    name = 'Preguntes'
+    pageRef = '/preguntes'
+    weight = 50
+  [[menus.main]]
+    name = 'Contacte'
+    pageRef = '/contacte'
+    weight = 60

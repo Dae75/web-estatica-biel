@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head><script src="/web-estatica-biel/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web-estatica-biel/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personalitzar la teva web | Hugo Biel i Marc</title>
+  <link rel="stylesheet" href="/web-estatica-biel/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="/">Hugo <span>Biel i Marc</span></a>
+    <nav>
+      
+        <a href="/web-estatica-biel/">Inici</a>
+      
+        <a href="/web-estatica-biel/installacio/">Instal·lació</a>
+      
+        <a href="/web-estatica-biel/publicacio/">Publicació</a>
+      
+        <a href="/web-estatica-biel/personalitzacio/">Personalització</a>
+      
+        <a href="/web-estatica-biel/preguntes/">Preguntes</a>
+      
+        <a href="/web-estatica-biel/contacte/">Contacte</a>
+      
+    </nav>
+  </header>
+  <main>
+    
+<section class="content">
+  <h1>Personalitzar la teva web</h1>
+  <h2 id="on-es-canvia-cada-cosa">On es canvia cada cosa</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Què vols canviar</th>
+					<th>Fitxer</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Nom del site i adreça</td>
+					<td><code>hugo.toml</code></td>
+			</tr>
+			<tr>
+					<td>Opcions del menú</td>
+					<td><code>hugo.toml</code>, bloc <code>[menus]</code></td>
+			</tr>
+			<tr>
+					<td>Logo i peu de pàgina</td>
+					<td><code>layouts/baseof.html</code></td>
+			</tr>
+			<tr>
+					<td>Disseny de la portada</td>
+					<td><code>layouts/home.html</code></td>
+			</tr>
+			<tr>
+					<td>Disseny de les pàgines</td>
+					<td><code>layouts/page.html</code></td>
+			</tr>
+			<tr>
+					<td>Textos de cada pàgina</td>
+					<td><code>content/*.md</code></td>
+			</tr>
+			<tr>
+					<td>Colors i tipografia</td>
+					<td><code>static/css/style.css</code></td>
+			</tr>
+			<tr>
+					<td>Imatges</td>
+					<td><code>static/img/</code></td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="canviar-el-nom-de-la-web">Canviar el nom de la web</h2>
+<p>Són tres llocs:</p>
+<ol>
+<li>A <code>hugo.toml</code>, la línia <code>title = '...'</code>.</li>
+<li>A <code>layouts/baseof.html</code>, el logo de la capçalera i el text del peu.</li>
+<li>A <code>content/_index.md</code>, la secció &ldquo;Qui som&rdquo;.</li>
+</ol>
+<h2 id="afegir-una-pàgina-nova">Afegir una pàgina nova</h2>
+<p>Crea el fitxer, per exemple <code>content/sobre-nosaltres.md</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Sobre nosaltres&#34;</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Aquí va el text de la pàgina.
+</span></span></code></pre></div><p>Afegeix-la al menú, a <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Sobre nosaltres&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">pageRef</span> = <span style="color:#e6db74">&#39;/sobre-nosaltres&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">70</span>
+</span></span></code></pre></div><p>El número de <code>weight</code> marca l&rsquo;ordre: com més baix, més a l&rsquo;esquerra.</p>
+<h2 id="escriure-en-markdown">Escriure en Markdown</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Títol de secció
+</span></span></span><span style="display:flex;"><span>Text amb <span style="font-weight:bold">**negreta**</span> i <span style="font-style:italic">*cursiva*</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Element de llista
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Un altre element
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">Text de l&#39;enllaç</span>](<span style="color:#a6e22e">https://exemple.com</span>)
+</span></span></code></pre></div><h2 id="afegir-imatges">Afegir imatges</h2>
+<p>Posa la imatge a <code>static/img/foto.jpg</code> i, al Markdown, fes-hi referència així:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Descripció de la imatge</span>](<span style="color:#a6e22e">/web-estatica-biel/img/foto.jpg</span>)
+</span></span></code></pre></div><p>Recorda posar el nom del teu repositori al camí, perquè la web no està a l&rsquo;arrel del domini.</p>
+<h2 id="canviar-colors-i-estils">Canviar colors i estils</h2>
+<p>Al fitxer <code>static/css/style.css</code> trobaràs els colors principals:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Color</th>
+					<th>Ús</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>#0f172a</code></td>
+					<td>Fons del menú</td>
+			</tr>
+			<tr>
+					<td><code>#38bdf8</code></td>
+					<td>Detalls i botons</td>
+			</tr>
+			<tr>
+					<td><code>#1e40af</code></td>
+					<td>Degradat de la capçalera</td>
+			</tr>
+	</tbody>
+</table>
+<p>Canvia&rsquo;ls pels teus i desa. Amb <code>hugo server</code> engegat, veuràs el resultat a l&rsquo;instant.</p>
+<h2 id="les-plantilles">Les plantilles</h2>
+<p>Les plantilles són HTML amb petites instruccions de Hugo entre dobles claus. Per exemple, <code>.Title</code> mostra el títol de la pàgina i <code>.Content</code> el seu contingut. Amb <code>baseof.html</code> defineixes l&rsquo;estructura comuna (capçalera i peu) i les altres plantilles hi encaixen.</p>
+<h2 id="usar-un-tema">Usar un tema</h2>
+<p>Si no vols crear el disseny des de zero, pots instal·lar un tema de la <a href="https://themes.gohugo.io">galeria oficial</a>. Cada tema explica la seva instal·lació, però el procés habitual és:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/AUTOR/NOM-DEL-TEMA.git themes/nom-del-tema
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;nom-del-tema&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span></code></pre></div><p>Si uses un tema, hauràs d&rsquo;esborrar o adaptar les teves plantilles de <code>layouts/</code>, perquè tenen prioritat sobre les del tema. Al workflow de GitHub, afegeix <code>submodules: recursive</code> dins de <code>with:</code> al pas <code>actions/checkout</code>.</p>
+
+</section>
+
+  </main>
+  <footer>
+    <p>© 2026 Hugo Biel i Marc. Guia educativa sobre Hugo.</p>
+  </footer>
+</body>
+</html>

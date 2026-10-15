@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Inici on Hugo Biel i Marc</title>
+		<link>http://localhost:1313/web-estatica-biel/</link>
+		<description>Recent content in Inici on Hugo Biel i Marc</description>
+		<generator>Hugo</generator>
+		<language>ca</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/web-estatica-biel/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Contacte</title>
+				<link>http://localhost:1313/web-estatica-biel/contacte/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/web-estatica-biel/contacte/</guid>
+				<description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Correu:&lt;/strong&gt; &lt;a href=&#34;mailto:hola@hugobielimarc.example&#34;&gt;hola@hugobielimarc.example&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Projecte:&lt;/strong&gt; Hugo Biel i Marc&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ubicació:&lt;/strong&gt; Vic, Catalunya&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:hola@hugobielimarc.example&#34;&gt;Envia&amp;rsquo;ns un correu&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Guia d&#39;instal·lació de Hugo</title>
+				<link>http://localhost:1313/web-estatica-biel/installacio/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/web-estatica-biel/installacio/</guid>
+				<description>&lt;h2 id=&#34;requisits&#34;&gt;Requisits&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Un ordinador amb Windows, macOS o Linux.&lt;/li&gt;&#xA;&lt;li&gt;Un terminal. A Windows recomanem &lt;strong&gt;Git Bash&lt;/strong&gt;, que s&amp;rsquo;instal·la amb Git.&lt;/li&gt;&#xA;&lt;li&gt;Un editor de codi, per exemple &lt;a href=&#34;https://code.visualstudio.com&#34;&gt;VS Code&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Un compte a &lt;a href=&#34;https://github.com&#34;&gt;GitHub&lt;/a&gt;, necessari per a la pàgina de publicació.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;1-installar-git&#34;&gt;1. Instal·lar Git&lt;/h2&gt;&#xA;&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;winget install Git.Git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;macos&#34;&gt;macOS&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;linux-debianubuntu&#34;&gt;Linux (Debian/Ubuntu)&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-installar-hugo&#34;&gt;2. Instal·lar Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Instal·la sempre l&amp;rsquo;edició &lt;strong&gt;extended&lt;/strong&gt;, que inclou funcions extra (com processar SASS) i és la que fan servir la majoria de temes.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Personalitzar la teva web</title>
+				<link>http://localhost:1313/web-estatica-biel/personalitzacio/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/web-estatica-biel/personalitzacio/</guid>
+				<description>&lt;h2 id=&#34;on-es-canvia-cada-cosa&#34;&gt;On es canvia cada cosa&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Què vols canviar&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Fitxer&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Nom del site i adreça&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;hugo.toml&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Opcions del menú&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;hugo.toml&lt;/code&gt;, bloc &lt;code&gt;[menus]&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Logo i peu de pàgina&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;layouts/baseof.html&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Disseny de la portada&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;layouts/home.html&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Disseny de les pàgines&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;layouts/page.html&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Textos de cada pàgina&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;content/*.md&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Colors i tipografia&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;static/css/style.css&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Imatges&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;static/img/&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;canviar-el-nom-de-la-web&#34;&gt;Canviar el nom de la web&lt;/h2&gt;&#xA;&lt;p&gt;Són tres llocs:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;A &lt;code&gt;hugo.toml&lt;/code&gt;, la línia &lt;code&gt;title = &#39;...&#39;&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;A &lt;code&gt;layouts/baseof.html&lt;/code&gt;, el logo de la capçalera i el text del peu.&lt;/li&gt;&#xA;&lt;li&gt;A &lt;code&gt;content/_index.md&lt;/code&gt;, la secció &amp;ldquo;Qui som&amp;rdquo;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;afegir-una-pàgina-nova&#34;&gt;Afegir una pàgina nova&lt;/h2&gt;&#xA;&lt;p&gt;Crea el fitxer, per exemple &lt;code&gt;content/sobre-nosaltres.md&lt;/code&gt;:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Preguntes habituals i recursos</title>
+				<link>http://localhost:1313/web-estatica-biel/preguntes/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/web-estatica-biel/preguntes/</guid>
+				<description>&lt;h2 id=&#34;errors-habituals&#34;&gt;Errors habituals&lt;/h2&gt;&#xA;&lt;h3 id=&#34;la-web-no-té-estils-a-github-pages&#34;&gt;La web no té estils a GitHub Pages&lt;/h3&gt;&#xA;&lt;p&gt;Revisa que el &lt;code&gt;baseURL&lt;/code&gt; del &lt;code&gt;hugo.toml&lt;/code&gt; coincideixi exactament amb l&amp;rsquo;adreça de la web, incloent el nom del repositori.&lt;/p&gt;&#xA;&lt;h3 id=&#34;error-404-a-github-pages&#34;&gt;Error 404 a GitHub Pages&lt;/h3&gt;&#xA;&lt;p&gt;Comprova que a &lt;strong&gt;Settings → Pages&lt;/strong&gt; la font sigui &lt;strong&gt;GitHub Actions&lt;/strong&gt; i que el workflow hagi acabat en verd a la pestanya &lt;strong&gt;Actions&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;hugo-command-not-found&#34;&gt;&lt;code&gt;hugo: command not found&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Reinicia el terminal. Si continua fallant, torna a executar la instal·lació de Hugo.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Publicar la web a GitHub Pages</title>
+				<link>http://localhost:1313/web-estatica-biel/publicacio/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/web-estatica-biel/publicacio/</guid>
+				<description>&lt;h2 id=&#34;com-funciona&#34;&gt;Com funciona&lt;/h2&gt;&#xA;&lt;p&gt;GitHub Pages serveix fitxers estàtics, així que és ideal per a Hugo. Amb &lt;strong&gt;GitHub Actions&lt;/strong&gt; configurem un procés automàtic: cada vegada que fas &lt;code&gt;git push&lt;/code&gt;, GitHub construeix la web amb Hugo i la publica.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-configurar-el-baseurl&#34;&gt;1. Configurar el &lt;code&gt;baseURL&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Al fitxer &lt;code&gt;hugo.toml&lt;/code&gt;, posa l&amp;rsquo;adreça final de la web:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://EL-TEU-USUARI.github.io/NOM-DEL-REPOSITORI/&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L&amp;rsquo;usuari va &lt;strong&gt;en minúscules&lt;/strong&gt; a l&amp;rsquo;adreça, encara que el teu usuari tingui majúscules. Per exemple, l&amp;rsquo;usuari &lt;code&gt;Dae75&lt;/code&gt; es converteix en &lt;code&gt;dae75.github.io&lt;/code&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Serveis</title>
+				<link>http://localhost:1313/web-estatica-biel/serveis/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/web-estatica-biel/serveis/</guid>
+				<description>&lt;h2 id=&#34;disseny-web&#34;&gt;Disseny web&lt;/h2&gt;&#xA;&lt;p&gt;Webs corporatives i botigues en línia, des de 900 €.&lt;/p&gt;&#xA;&lt;h2 id=&#34;aplicacions-a-mida&#34;&gt;Aplicacions a mida&lt;/h2&gt;&#xA;&lt;p&gt;Anàlisi, desenvolupament i manteniment del teu programari.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cloud-i-suport&#34;&gt;Cloud i suport&lt;/h2&gt;&#xA;&lt;p&gt;Plans mensuals amb monitoratge i suport tècnic.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
